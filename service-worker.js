@@ -12,15 +12,11 @@ return cache.addAll([
 
 '/index.html',
 
-'/index.html?homescreen=1',
+'/assets/css/main.css',
 
-'/?homescreen=1',
+'/assets/css/loading.css',
 
-'/styles/main.css',
-
-'/scripts/main.min.js',
-
-'/sounds/airhorn.mp3'
+'/assets/js/maps.js'
 
 ]);
 
