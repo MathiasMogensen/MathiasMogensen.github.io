@@ -2,7 +2,7 @@ function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 57.046707, lng: 9.935932},
         zoom: 12,
-        gestureHandling: 'cooperative',
+        gestureHandling: 'greedy',
         mapTypeControl: true,
         mapTypeControlOptions: {
           style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
