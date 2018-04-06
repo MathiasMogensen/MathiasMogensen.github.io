@@ -1,4 +1,4 @@
-self.addEventListener('fetch', function(event){
+self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(cacheName).then(function(cache) {
           return cache.addAll(
@@ -11,3 +11,6 @@ self.addEventListener('fetch', function(event){
         })
       );
 });
+self.addEventListener('fetch', function(event) {
+    event.respondWith(caches.match(event.request));
+  });
