@@ -16,9 +16,7 @@ return cache.addAll([
 
 '/assets/css/loading.css',
 
-'/assets/js/maps.js',
-
-'https://maps.googleapis.com/maps/api/js?key=AIzaSyAIXvRPJF0TRkBrTMoEMkxrCk9gy-7mYCk&libraries=places&callback=initAutocomplete'
+'/assets/js/maps.js'
 
 ]);
 

@@ -2,7 +2,12 @@ function initAutocomplete() {
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 57.046707, lng: 9.935932},
         zoom: 12,
-        gestureHandling: 'cooperative'
+        gestureHandling: 'cooperative',
+        mapTypeControl: true,
+        mapTypeControlOptions: {
+          style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+          position: google.maps.ControlPosition.BOTTOM_RIGHT
+    },
       });
 
     // Create the search box and link it to the UI element.
