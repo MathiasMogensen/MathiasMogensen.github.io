@@ -1,0 +1,113 @@
+@import "partials/header";
+@import "partials/index";
+@import "partials/footer";
+@import "partials/products";
+@import "partials/contact";
+@import "partials/user";
+
+.highlight { background-color: yellow }
+.pagination {
+    list-style-type: none;
+    display: flex;
+    & li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-link {
+        padding: 11px 17px;
+        margin: 0px 1px;
+        background-color: white;
+        color: rgb(182, 182, 182);
+        border: 1px solid rgb(230, 230, 230);
+        border-radius: 3px;
+        font-size: 0.8rem;
+        display: block;
+        &:hover {
+            text-decoration: none;
+        }
+        & .fa-angle-left, .fa-angle-right {
+            margin: 0;
+            font-size: 0.9rem;
+            padding: 2.3px 0px;
+        }
+    }
+    &-active {
+        background-color: rgb(236, 236, 236);
+        color: rgb(117, 117, 117);
+    }
+}
+.alert {
+    &-box {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        z-index: 9999;
+        padding: 10px 20px;
+        transform: translateY(-20px);
+        animation: 1s ease-out 0s 1 alert_open;
+        border-radius: 5px;
+        border: 1px solid rgb(124, 168, 120);
+        display: flex;
+        flex-direction: row;
+        & p {
+            margin: 0;
+            margin-left: 10px;
+            font-size: 1rem;
+        }
+    }
+    &-close {
+        animation: 1s ease-out 0s 1 alert_close;
+    }
+    &-success {
+        background-color: #BBF5BB;
+        & p, i {
+            color: rgb(9, 65, 13) !important;
+        }
+    }
+    &-error {
+        background-color: #F67975;
+        color: white !important;
+        & p, i {
+            color: white !important;
+        }
+    }
+}
+@keyframes alert_open {
+    0% {
+        transform: translateY(40px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+@keyframes alert_close {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(80px);
+    }
+}
+
+body {
+    background-color: #FAFAFA;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', cursive;
+}
+p,a {
+    font-family: 'Open Sans', sans-serif;
+}
+p {
+    color: #9e9e9e;
+    font-size: 16px;
+}
+input:focus, textarea:focus, button:focus, a:focus, a:active {
+    outline: none !important;
+    box-shadow: 0 !important;
+}
+button {
+    cursor: pointer;
+}

@@ -1,0 +1,109 @@
+.show {
+    background-color: #5f7b93;
+    padding: 30px 0px;
+}
+.navbar-toggler {
+    border: none;
+    & .burger-icon {
+        color: white;
+        font-size: 40px;
+    }
+}
+.navbar {
+    color: white;
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    & li a {
+        text-transform: uppercase;
+        color: rgb(236, 236, 236) !important;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        margin: 0px 5px;
+        &:hover {
+            color: white !important;
+        }
+    }
+    &-brand {
+        text-transform: lowercase;
+        font-family: 'Lobster', cursive;
+        font-size: 3rem;
+        color: white !important;
+        margin: 0px 60px;
+    }
+    &-collapse {
+        display: flex; 
+        justify-content: center;
+    }
+    &-nav {
+        display: flex; 
+        align-items: center;
+    }
+    &-user {
+        position: absolute;
+        right: 30px;
+    }
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+#search_form {
+    display: inline-block !important;
+    position: absolute;
+}
+#search {
+    color: white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.search {
+    margin-left: 15px;
+    &-input {
+        height: 20px;
+        border: none;
+        border-bottom: 1px solid white !important;
+        padding: 0px 3px;
+        background: none;
+        caret-color: white;
+        color: white;
+        transform: scaleY(0);
+        &:focus {
+            outline: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+        &-open {
+            animation-name: search_open;
+            animation-duration: 0.5s;
+            transform: scaleX(1);
+        }
+        &-closed {
+            animation-name: search_close;
+            animation-duration: 0.5s;
+            transform: scaleX(0);
+        }
+    }
+}
+@media(max-width:992px) {
+    .navbar-user {
+        top: 13px;
+    }
+}
+@keyframes search_open {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+@keyframes search_close {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
